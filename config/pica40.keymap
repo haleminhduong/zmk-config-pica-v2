@@ -30,6 +30,7 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
+
         hr: homerow_mods_ring_finger {
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS_RING_FINGER";
@@ -39,6 +40,7 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
+
         hp: homerow_mods_pinky_finger {
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS_PINKY_FINGER";
@@ -48,6 +50,7 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
+
         tm: thumb_mods {
             compatible = "zmk,behavior-hold-tap";
             label = "THUMB_MODS";
@@ -57,6 +60,7 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
+
         lh: layer_hold {
             compatible = "zmk,behavior-hold-tap";
             label = "LAYER_HOLD";
@@ -77,6 +81,7 @@
 
             mods = <MOD_LALT>;
         };
+
         lt_bspc: layer_tap_backspace_tab {
             compatible = "zmk,behavior-hold-tap";
             label = "LT_BT";
@@ -106,7 +111,7 @@
 &kp Q      &kp W               &kp E       &kp R           &kp T        &kp Y            &kp U         &kp I        &kp O        &kp P
 &kp EQUAL  &hp LEFT_CONTROL A  &hr LALT S  &hm LEFT_GUI D  &hm LSHFT F  &kp G            &kp H         &hm RSHFT J  &hm RCTRL K  &hr LALT L  &hp RIGHT_CONTROL SEMI  &kp SQT
 &kp MINUS  &kp Z               &kp X       &kp C           &kp V        &kp B            &kp N         &kp M        &kp COMMA    &kp DOT     &kp FSLH                &kp GRAVE
-                               &lt 4 ESC   &lt 2 TAB       &lh 3 SPACE  &lt 4 BACKSPACE  &lh 1 DELETE  &lt 4 ENTER
+                               &lt 5 ESC   &lt 2 TAB       &lh 3 SPACE  &lt 4 BACKSPACE  &lh 1 DELETE  &lt 4 ENTER
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
@@ -145,6 +150,15 @@
 &kp LCTRL  &kp F11  &kp F4  &kp F5      &kp F6     &kp PAUSE_BREAK  &none  &kp RSHFT   &kp RCTRL  &kp LALT  &kp RGUI  &none
 &kp ENTER  &kp F10  &kp F1  &kp F2      &kp F3     &kp CAPS         &none  &none       &none      &none     &none     &none
                     &trans  &kp C_NEXT  &kp C_PP   &trans           &none  &none
+            >;
+        };
+
+        layer_5 {
+            bindings = <
+&trans        &trans        &trans  &trans  &trans  &bt BT_CLR  &trans  &trans  &trans  &trans
+&trans        &trans        &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&bt BT_SEL 0  &bt BT_SEL 1  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+                            &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans
             >;
         };
     };
